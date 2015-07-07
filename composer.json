@@ -1,0 +1,22 @@
+{
+    "name": "xj/yii2-galleria-widget",
+    "description": "yii2-galleria-widget",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "xjflyttp",
+            "email": "xjflyttp@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "yiisoft/yii2": "*",
+        "bower-asset/galleria": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "xj\\galleria\\": ""
+        }
+    }
+}
