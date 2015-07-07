@@ -59,21 +59,19 @@ With Javascript Data
 ---
 ```css
 #gallery{ width: 700px; height: 400px; background: #000 }
-#source{display:none;}
 ```
 ```html
 <div id="gallery"></div>
-<div id="source">
-    <a href="<?= Yii::getAlias('@web/images/hoverzoom/1.jpg'); ?>"><img src="<?= Yii::getAlias('@web/images/hoverzoom/1.jpg'); ?>" alt="" /></a>
-    <a href="<?= Yii::getAlias('@web/images/hoverzoom/3.jpg'); ?>"><img src="<?= Yii::getAlias('@web/images/hoverzoom/3.jpg'); ?>" alt="" /></a>
-    <a href="<?= Yii::getAlias('@web/images/nivoslider/1.jpg'); ?>"><img src="<?= Yii::getAlias('@web/images/nivoslider/1.jpg'); ?>" alt="" /></a>
-</div>
 ```
 ```php
 xj\galleria\Galleria::widget([
     'selector' => '#gallery',
     'jsOptions' => [
-        'dataSource' => '#source',
+        'dataSource' => [
+            ['image' => Yii::getAlias('@web/images/hoverzoom/1.jpg')],
+            ['image' => Yii::getAlias('@web/images/hoverzoom/3.jpg')],
+            ['image' => Yii::getAlias('@web/images/nivoslider/1.jpg')],
+        ],
         'keepSource' => false,
     ]
 ]);
