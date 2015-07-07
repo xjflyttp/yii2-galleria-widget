@@ -90,7 +90,7 @@ class Galleria extends Widget
     {
         $jsOptions = Json::encode($this->jsOptions);
         $script = "Galleria.run('{$this->selector}', {$jsOptions});";
-        $this->view->registerJs($script);
+        $this->view->registerJs($script, $this->registerPosition);
     }
 
 }
