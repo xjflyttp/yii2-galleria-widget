@@ -15,5 +15,9 @@ composer.json
 example
 -----
 ```php
-//nothing
+//register Assets Only
+xj\galleria\themes\ClassicAssets::register($this);
+
+//using Widget
+
 ```
