@@ -4,16 +4,26 @@
 https://github.com/aino/galleria
 ```
 
-composer.json
------
+### composer.json
+---
 ```json
 "require": {
-        "xj/yii2-galleria-widget": "*"
+    "xj/yii2-galleria-widget": "~1.0.0"
 },
 ```
 
+### Themes
+```php
+\xj\galleria\themes\DefaultAssets::register($this);
+\xj\galleria\themes\TwelveAssets::register($this);
+```
 
-With Html Tag
+### BasicAssets
+```php
+\xj\galleria\GalleriaAssets::register($this);
+```
+
+### With Html Tag
 ---
 ```css
 #galleria{ width: 700px; height: 400px; background: #000 }
@@ -26,12 +36,13 @@ With Html Tag
 </div>
 ```
 ```php
+\xj\galleria\themes\DefaultAssets::register($this);
 xj\galleria\Galleria::widget([
     'selector' => '#galleria',
 ]);
 ```
 
-With Html Data Tag
+### With Html Data Tag
 ---
 ```css
 #gallery{ width: 700px; height: 400px; background: #000 }
@@ -46,6 +57,7 @@ With Html Data Tag
 </div>
 ```
 ```php
+\xj\galleria\themes\DefaultAssets::register($this);
 xj\galleria\Galleria::widget([
     'selector' => '#gallery',
     'jsOptions' => [
@@ -55,7 +67,7 @@ xj\galleria\Galleria::widget([
 ]);
 ```
 
-With Javascript Data
+### With Javascript Data
 ---
 ```css
 #gallery{ width: 700px; height: 400px; background: #000 }
@@ -64,6 +76,7 @@ With Javascript Data
 <div id="gallery"></div>
 ```
 ```php
+\xj\galleria\themes\DefaultAssets::register($this);
 xj\galleria\Galleria::widget([
     'selector' => '#gallery',
     'jsOptions' => [
